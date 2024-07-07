@@ -6,7 +6,7 @@
       </div>
       <div id="product-display">
         <div class="prod-card" *ngFor="let c of categories;">
-          <a [routerLink]="['../produits/list',c.id]"><img class="prod-img" [src]="'../assets/images/ctg'+ c.id +'.jpg'"></a>
+          <a [routerLink]="['../produits/list',c.id]"><img class="prod-img" [src]="'assets/images/ctg'+ c.id +'.jpg'"></a>
           <h3 class="prod-name"> {{c.nom}}</h3>
         </div>
       </div>
