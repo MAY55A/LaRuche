@@ -1,7 +1,10 @@
 # LaRuche
 
-This project is a simple web site for displaying and managing honey products.
+This project is a simple website for displaying and managing honey products.
 
+## Deployment
+
+    - https://may55a.github.io/LaRuche
 
 ## Technologies
 
