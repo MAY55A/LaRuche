@@ -18,7 +18,7 @@
 </div>
 <div id="produits">
   <div *ngFor ="let p of tabProduits" class="prod">
-    <img class="prod-img" [src]="'../assets/images/'+p.id+'.png'">
+    <img class="prod-img" [src]="'assets/images/'+p.id+'.png'">
     <h3 class="prod-name">{{p.nom}}</h3>
     <h4 class="prod-prix">{{p.prix}} Dts</h4>
   </div>
