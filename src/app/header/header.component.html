@@ -1,0 +1,22 @@
+<nav class="navigation">
+  <a href="#" id="logo"><img src="../assets/images/logo.jpg" width="150px"><h1>LaRuche</h1></a>
+  <ul class="mainmenu">
+    <li><a routerLinkActive="active" routerLink="/pages/accueil">Accueil</a>
+    </li>
+    <li><a routerLinkActive="active" routerLink="/pages/produits/list">Produits</a>
+      <ul class="submenu">
+        <li *ngFor="let c of categories;">
+          <a routerLinkActive="active" [routerLink]="['/pages/produits/list',c.id]">{{c.nom}} <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </li>
+    <li><a routerLinkActive="active" routerLink="/pages/admin">Admin</a>
+    </li>
+  </ul>
+</nav>
+  <header class="site-header py-5 mb-4">
+    <div class="container">
+      <h1 class="display-4">Le Miel De LaRuche</h1>
+      <p class="lead">Découvrez l'essence pure de la nature avec nos délicieux miels et produits de la ruche, ainsi que notre collection de produits cosmétiques naturels.</p>
+    </div>
+  </header>

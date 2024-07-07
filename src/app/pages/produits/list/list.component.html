@@ -1,0 +1,26 @@
+<h3 *ngIf="categorie">" {{categorie.description}} "</h3>
+<div class="form">
+  <div id="search">
+    <input type="text" placeholder="Chercher" [(ngModel)]="nom"(ngModelChange)="onSearchChange()">
+  </div>
+  <div>
+  <label>trié par :</label>&nbsp;
+  <select [(ngModel)]="sort" (ngModelChange)="onSortChange()">
+    <option value=0>date d'ajout</option>
+    <option value=1>prix</option>
+  </select>&nbsp;&nbsp;
+  <label>ordre :</label>&nbsp;
+  <select [(ngModel)]="order" (ngModelChange)="onOrderChange()">
+    <option value=1>ascendant</option>
+    <option value=0>descendant</option>
+  </select>
+</div>
+</div>
+<div id="produits">
+  <div *ngFor ="let p of tabProduits" class="prod">
+    <img class="prod-img" [src]="'../assets/images/'+p.id+'.png'">
+    <h3 class="prod-name">{{p.nom}}</h3>
+    <h4 class="prod-prix">{{p.prix}} Dts</h4>
+  </div>
+</div>
+

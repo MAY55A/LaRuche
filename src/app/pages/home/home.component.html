@@ -1,0 +1,22 @@
+
+  <div id="container">
+      <div class="text">
+        <h4>Miel, gelée royale, et produits de la ruche</h4>
+        Chez LaRuche, nous sommes passionnés par la production de miel de la plus haute qualité, directement de nos abeilles à votre table. Explorez notre sélection diversifiée de miels artisanaux, de délices au miel et de produits cosmétiques, tous issus de la ruche.
+      </div>
+      <div id="product-display">
+        <div class="prod-card" *ngFor="let c of categories;">
+          <a [routerLink]="['../produits/list',c.id]"><img class="prod-img" [src]="'../assets/images/ctg'+ c.id +'.jpg'"></a>
+          <h3 class="prod-name"> {{c.nom}}</h3>
+        </div>
+      </div>
+      <div class="text">
+        <h4>Pourquoi choisir LaRuche ?</h4>
+        <ul>
+          <li><strong>Qualité Exceptionnelle :</strong>Nous nous engageons à fournir des produits de la plus haute qualité, directement de nos ruches à votre domicile.</li>
+          <li><strong>Artisanat Local :</strong>Soutenez les apiculteurs locaux en choisissant nos produits, tous fabriqués avec amour et expertise.</li>
+          <li><strong>Bienfaits pour la Santé :</strong> Découvrez les nombreux bienfaits pour la santé de notre miel cru et de nos produits cosmétiques naturels.</li>
+          <li><strong>Responsabilité Environnementale :</strong>Nous adoptons des pratiques durables pour préserver l'environnement et la santé des abeilles.</li>
+        </ul>
+      </div>
+  </div>

@@ -1,0 +1,55 @@
+<div class="alert alert-info" role="alert" *ngIf ="alert">
+    {{alert}}
+</div>
+<table class="table table-striped">
+    <tr><TH>Id</TH><th>Nom</th><th>Prix(Dts)</th><th>Catégorie</th><th>Date d'ajout</th></tr>
+    <tbody *ngFor="let p of tabProduits; let i = index">
+        <tr>
+            <td>{{p.id}}</td>
+            <td>{{p.nom}}</td>
+            <td>{{p.prix}}</td>
+            <td>{{p.categorie.nom}}</td>
+            <td>{{p.dateAjout}}</td>
+            <td class="d-flex "> 
+                <button  class="btn btn-primary" (click)="openEditForm(p)">Modifier</button>
+                <button (click)="deleteProduct(p)" class=" mx-3 btn btn-danger">Supprimer</button> 
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">  
+            <div class="modal-body">
+                <div *ngIf="selectedProduct" class="card">
+                    <h2 class="card-header">Modifier Produit</h2>
+                        <div class="card-body">
+                            <form (ngSubmit)="submitEditForm()">
+                                <div class="form-group">
+                                    <label for="nom">Nom:</label>
+                                    <input id="nom" [(ngModel)]="selectedProduct.nom" name="nom" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="prix">Prix (en Dt):</label>
+                                    <input type="number" step="0.250" min="1" id="prix" [(ngModel)]="selectedProduct.prix" name="prix" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Date d'ajout:</label>
+                                    <input type="date" id="date" [(ngModel)]="selectedProduct.dateAjout" name="date" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ctg">Catégorie:</label>
+                                    <select id="ctg" [(ngModel)]="selectedProduct.categorie" name="ctg" required class="form-control">
+                                        <option *ngFor="let c of categories;" [value]="c">{{ c.nom }}</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="button" (click)="closeEditForm()" class="btn btnsecondary">Cancel</button>
+                            </form>
+                        </div>
+                </div> 
+ 
+            </div>   
+        </div>
+    </div>
+</div>

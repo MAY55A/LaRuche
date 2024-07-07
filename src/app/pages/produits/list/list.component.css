@@ -1,0 +1,38 @@
+h3 {
+  text-align: center;
+  margin: 5%;
+}
+#produits {
+    margin: 5%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.prod {
+    width: 300px;
+    height: 450px;
+    background-color: hsla(52, 100%, 69%, 0.5);
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+
+}
+.prod-img {
+    height: 300px;
+}
+.prod-prix {
+    font-weight: bold;
+}
+.form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2%;
+  }
+  #search input {
+    height: 50px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    }

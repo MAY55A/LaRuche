@@ -1,0 +1,7 @@
+
+  <nav>
+    <ul>
+      <li routerLinkActive="active" *ngFor ="let c of categories"><a [routerLink]="['./list',c.id]">{{c.nom}}</a></li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>

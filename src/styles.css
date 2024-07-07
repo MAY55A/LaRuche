@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@font-face {
+  font-family: 'dancing-script';
+  src: url('assets/fonts/Dancing_Script/static/DancingScript-Regular.ttf') format('truetype');
+}
+body {
+  font-family: 'dancing-script';
+}
+.site-header {
+    background: rgb(250, 219, 106);
+    color: white;
+  }
+  
+  .site-footer {
+    background-color: #6a6a6b;
+    color: white;
+  }
+  
+  .site-footer .footer-copyright {
+    background-color: #333333;
+    text-align: center;
+  }
+  .site-footer .footer-copyright p {
+    margin: 0;
+  }
+  
+  .site-footer a {
+    color: #d2d1d1;
+  }
+  .site-footer li {
+    color: #d2d1d1;
+  }
+  .site-footer a:hover,
+  .site-footer a:focus {
+    text-decoration: none;
+    color: white;
+  }
+  .navbar-toggler-right {
+    position: absolute;
+    align-self: flex-start;
+    background-attachment: scroll;
+    background-clip: border-box;
+    right: 1rem;
+    touch-action: manipulation;
+  }
+
+  
